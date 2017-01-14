@@ -7,7 +7,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy/; botRegexSalt = /^\/salt/;botRegexPay = /^\/total offense/;
       botRegexAd=/^\/advance/;botRegexMI = /^\/mike/; botFoh = /^\/foh/; botDuck = /^\/duck/;
-      botRegexTw = /^\/twitch/i; botRegexYu = /^\/youtube/i; botRegexPlayerStats = /^\/player stats/; botRegexGuide = /^\/guidelines/;  botRegexSh = /^\/I don't like that shit/; botRegexCC = /^\/respek/; botRegexSr = /^\/trash/; botRegexQu = /^\/stfu/; botRegexPY = /^\/passing leader/;botRegexPR = /^\/rushing leader/;botRegexPC = /^\/receiving leader/;botRegexDT = /^\/tackles leader/;botRegexDS = /^\/sacks leader/;botRegexDI = /^\/Int leader/;
+      botRegexTw = /^\/twitch/i; botRegexYu = /^\/youtube/i; botRegexAnc = /^\/annoucement/; botRegexSetting = /^\/settings/; botRegexPlayerStats = /^\/player stats/; botRegexGuide = /^\/guidelines/;  botRegexSh = /^\/I don't like that shit/; botRegexCC = /^\/respek/; botRegexSr = /^\/trash/; botRegexQu = /^\/stfu/; botRegexPY = /^\/passing leader/;botRegexPR = /^\/rushing leader/;botRegexPC = /^\/receiving leader/;botRegexDT = /^\/tackles leader/;botRegexDS = /^\/sacks leader/;botRegexDI = /^\/Int leader/;
       botRegexPower=/^\/power rankings/; botRegexLuck = /^\/luck/;botRegexPassing = /^\/passing offense/;botRegexRushing = /^\/rushing offense/;botRegexTotalDefense = /^\/total defense/;botRegexDefensePass = /^\/passing defense/;botRegexDefenseRush = /^\/passing offense/; botRegexFumble = /^\/fumble/; botRegexL = /^\/L/;  botRegexCryingg = /^\/cry/;  botRegexRuless = /^\/rules/; botRegexBoot = /^\/boot/; botRegexCommands = /^\/commands/; botRegexTeamStats = /^\/team stats/; botRegexDL = /^\/nwl/; botRegexWeekOne = /^\/week1/;botRegexWeek2 = /^\/week 2/;botRegexWeek3 = /^\/week 3/;botRegexWeek4 = /^\/week 4/;botRegexWeek5 = /^\/week 5/;botRegexWeek6 = /^\/week 6/;botRegexWeek7 = /^\/week 7/;botRegexWeek8 = /^\/week 8/;botRegexWeek9 = /^\/week 9/;botRegexWeek10 = /^\/week 10/;botRegexWeek11 = /^\/week 11/;botRegexWeek12 = /^\/week 12/;botRegexWeek13 = /^\/week 13/;botRegexWeek14 = /^\/week 14/;botRegexWeek15 = /^\/week 15/;botRegexWeek16 = /^\/week 16/;botRegexWeek17 = /^\/week 17/; botRegexCheese = /^\/cheese/
       cheese1 = 'https://pbs.twimg.com/profile_images/494330891/cheese_oh_cheese_400x400.jpg'; cheese2 = 'https://i.ytimg.com/vi/efLRmlILC2I/maxresdefault.jpg'
       cheese3 = 'http://www.packerpalace.com/palace02/maddenwcheese.gif';
@@ -23,10 +23,20 @@ function respond() {
     this.res.writeHead(200);
     postMessage("https://i.groupme.com/600x600.jpeg.abf553e8c766444ca32cd06ffb450d8c");
     this.res.end();
+      } 
+  else if(request.text && botRegexAnc.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/500x446.jpeg.6697a5232e4644ec94697f70ee9f2a1e");
+    this.res.end();
   } 
   else if(request.text && botRegexAd.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://i.imgflip.com/xgtsl.jpg");
+    postMessage("https://i.groupme.com/447x106.jpeg.4ae31cd5c77d4e25a00040120ee1ab24");
+    this.res.end();
+  }
+   else if(request.text && botRegexSetting.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/960x960.jpeg.6066b88167774757ab6c01e036accdec");
     this.res.end();
   }
   else if(request.text && botRegexPay.test(request.text)) {
